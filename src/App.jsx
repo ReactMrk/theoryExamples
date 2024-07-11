@@ -1,14 +1,9 @@
 import React from 'react';
-import ClientManagement from "./client/ClientManagement";
 import './App.css';
+import CallerApp from "./callerApp/callerApp";
 
 const App = () => {
-  return (
-    <div className="container">
-      <h1>Client Management System</h1>
-      <ClientManagement />
-    </div>
-  )
+    return <CallerApp/>
 };
 
 export default App
