@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {getByRole, render, screen} from '@testing-library/react';
 import {userEvent} from '@testing-library/user-event';
 import Client from './Client.jsx';
 import {serviceProcess} from "../mockService/mockServiceController";
@@ -17,7 +17,7 @@ const setData = jest.fn();
 const renderComponent = () => render(<Client setShowLoading={setShowLoading} setData={setData}/>);
 
 describe('ClientManagement', () => {
-    
+
     beforeEach(() => {
         serviceProcess.mockReturnValue("Success");
     })
@@ -25,12 +25,17 @@ describe('ClientManagement', () => {
         jest.resetAllMocks();
     })
 
-    it('should render components ClientForm and ClientList', async() => {
-        // Given -> Preconditions to my test if any (none in this case)
-        // When -> Action of the test (the render in this case)
-        renderComponent();
-        // Then --> Assertions
+    it('should render components ClientForm and ClientList', async () => {
+        // Given Section -> Preconditions to my test if any (none in this case)
+        // When Section -> Action of the test (the render in this case)
+        const {getByRole} = renderComponent();
+        // Then Section -> Assertions
         screen.debug(undefined, 300000);
+        //      Assert using render utilities (uses the DOM to perform checks, not recomended)
+        const buttonFromRender = getByRole('button', {name: "Click me to call the service"});
+        expect(buttonFromRender).toBeInTheDocument();
+        expect(buttonFromRender).toBeVisible();
+        //      Assert using screen utilities (simulated real interaction with the screen, use this method)
         const button = screen.getByRole('button', {name: "Click me to call the service"});
         expect(button).toBeInTheDocument();
         expect(button).toBeVisible();
