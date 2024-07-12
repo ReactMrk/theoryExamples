@@ -31,7 +31,7 @@ describe('ClientManagement', () => {
         const {getByRole} = renderComponent();
         // Then Section -> Assertions
         screen.debug(undefined, 300000);
-        //      Assert using render utilities (uses the DOM to perform checks, not recomended)
+        //      Assert using render utilities (uses the DOM to perform checks, not recommended)
         const buttonFromRender = getByRole('button', {name: "Click me to call the service"});
         expect(buttonFromRender).toBeInTheDocument();
         expect(buttonFromRender).toBeVisible();
