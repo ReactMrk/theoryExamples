@@ -1,25 +1,5 @@
 
-function doSomething() {
-    console.log('Hello')
-}
-
-const doSomething2 = function () {
-    console.log('Hello2')
-}
-
-const doSomething3 = () => {
-    console.log('Hello3')
-}
-
-
-
-
-doSomething();
-doSomething2();
-doSomething3();
-
-
-// var vs let
+// var vs let and scopes
 var funcs = [];
 // let's create 3 functions
 // the "i" var to a let and see what happens

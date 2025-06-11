@@ -12,8 +12,6 @@ const doSomething3 = () => {
 }
 
 
-
-
 doSomething();
 doSomething2();
 doSomething3();

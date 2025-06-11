@@ -1,9 +1,11 @@
 const someString = "Hello World";
 const aNumber = 12345;
+const aBoolean = false;
 
 
 console.log(someString);
 console.log(aNumber);
+console.log(aBoolean);
 
 
 let someMutableString = "initialValue";
