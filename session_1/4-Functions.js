@@ -23,5 +23,7 @@ const doSomething4 = (someArgument) => {
     console.log(someArgument)
 }
 
+// Argument selection from object ({argument})
+
 doSomething4("Hello4");
 doSomething4(1234);

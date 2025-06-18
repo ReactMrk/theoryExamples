@@ -13,6 +13,7 @@ console.log("length", anArray.length);
 // Transform without mutation
 console.log("map", anArray.map(v => v+1));
 console.log("notMutatedArray", anArray);
+// Find, Filter
 // Transform with mutation
 console.log("push", anArray.push(5));
 console.log("mutatedArray", anArray);

@@ -14,3 +14,7 @@ for (var j = 0; j < 3; j++) {
     // and now let's run each one to see
     funcs[j]();
 }
+
+// Closure
+
+// Import export
