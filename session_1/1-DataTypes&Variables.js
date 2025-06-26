@@ -1,7 +1,7 @@
 // ----- Types ----
 console.log("----- Types ----");
-const someString = "Hello World";
 const aNumber = 12345;
+const someString = "Hello World";
 const aBoolean = false;
 
 console.log(someString);
