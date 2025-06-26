@@ -1,21 +1,21 @@
-// Declaration
+// ----- Declaration ---
+console.log("----- Declaration ---");
 const anArray = [1,2,3,4];
+
 console.log("anArray", anArray);
 
 
-// Access
+// ----- Access ---
+console.log("----- Access ---");
+
 console.log("first third position", anArray[2]);
 console.log("first third position", anArray["2"]);
 
 
-// Methods
-console.log("length", anArray.length);
-// Transform without mutation
-console.log("map", anArray.map(v => v+1));
-console.log("notMutatedArray", anArray);
-// Find, Filter
-// Transform with mutation
-console.log("push", anArray.push(5));
-console.log("mutatedArray", anArray);
-console.log("pop", anArray.pop());
-console.log("restoredArray", anArray);
+// ----- Methods & Properties---
+console.log("----- Methods & Properties ---");
+
+console.log("Length", anArray.length);
+console.log("Map", anArray.map(v => v+1));
+console.log("Find", anArray.find(v => v===3))
+console.log("Filter", anArray.filter(v => v===3))

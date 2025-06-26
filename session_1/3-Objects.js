@@ -1,33 +1,43 @@
-
+// ----- Declaration ---
+console.log("----- Declaration ---");
 const b = "b";
-
-
-// Declaration
 const anObject = {
     a: "a",
     b
 }
+
 console.log("anObject", anObject);
 
-// Nesting
+// ----- Nesting ---
+console.log("----- Nesting ---");
 const anotherObject = {
     c: anObject,
     d: 1234
 }
+
 console.log("anotherObject", anotherObject);
 
-//Destructuring
+
+// ----- Destructuring ---
+console.log("----- Destructuring ---");
 const aThirdObject = {
     ...anObject,
     d: anotherObject.d,
     e:4321
 }
+
 console.log("aThirdObject", aThirdObject);
 
-//Access
+
+// ----- Access ---
+console.log("----- Access ---");
+
+console.log("property with key d", aThirdObject.d);
 console.log("property with key d", aThirdObject['d']);
 
-//Conditional Chaining
+
+// ----- Conditional Chaining ---
+console.log("----- Conditional Chaining ---");
 const someObject = {
     a: "someVal",
     b: {
@@ -41,13 +51,19 @@ someObject.b = null;
 // TypeError: Cannot read properties of null (reading 'c')
 console.log("access after mutation", someObject?.b?.c);
 
-//Array deconstruction
+
+// ----- Array deconstruction ---
+console.log("----- Array deconstruction ---");
 const anArray = [1,2,3,4];
 const anotherArray = [5,6,7]
 const [v1,v2,v3,v4] = anArray;
+
 console.log("value 2 of array", v2);
 
-// Array composition
+
+// ----- Array composition ---
+console.log("----- Array composition ---");
 const aThirdArray = [...anArray, ...anotherArray];
+
 console.log("aThirdArray", aThirdArray);
 console.log("concat Array", anArray.concat(anotherArray));
