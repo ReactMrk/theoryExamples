@@ -1,3 +1,4 @@
+// CodePen Ref: https://codepen.io/ReactMrk/pen/RNPvgWg
 // ----- var vs let and scopes ---
 console.log("----- var vs let and scopes ---");
 var funcs = [];

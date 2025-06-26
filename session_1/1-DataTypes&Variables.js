@@ -1,3 +1,4 @@
+// CodePen Ref: https://codepen.io/ReactMrk/pen/ZYGwyYN
 // ----- Types ----
 console.log("----- Types ----");
 const aNumber = 12345;

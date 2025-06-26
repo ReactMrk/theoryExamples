@@ -1,3 +1,4 @@
+// CodePen Ref: https://codepen.io/ReactMrk/pen/ogXmwjz
 // ----- Function declarations ---
 console.log("----- Function declarations ---");
 function aNamedFunction() {
