@@ -1,16 +1,16 @@
-// Importing in another module:
-import { getMessageInfo, filterTodaysMessages } from './MessageUtils.js'
-// Importing WELCOME_MESSAGE with an alias:
-import { NO_MESSAGES, WELCOME_MESSAGE as WELCOME} from "./Constants.js";
+// Named import and importing using an alias:
+import { getMessageInfo, filterTodaysMessages as filterToday} from './MessageUtils.js'
+// Importing everything with *:
+import * as CONSTANTS from "./Constants.js";
 
 const showMessagesFromToday = (allMessages) => {
-  const todaysMessages = filterTodaysMessages(allMessages);
+  const todaysMessages = filterToday(allMessages);
 
-  console.log(WELCOME);
+  console.log(CONSTANTS.WELCOME_MESSAGE);
   if(todaysMessages.length > 0)
     todaysMessages.forEach((message) => console.log(getMessageInfo(message)));
   else
-    console.log(NO_MESSAGES);
+    console.log(CONSTANTS.NO_MESSAGES);
 }
 
 const messageList = [
