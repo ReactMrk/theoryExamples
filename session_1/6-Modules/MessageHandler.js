@@ -1,5 +1,6 @@
 // Importing in another module:
 import { getMessageInfo, filterTodaysMessages } from './MessageUtils.js'
+// Importing WELCOME_MESSAGE with an alias:
 import { NO_MESSAGES, WELCOME_MESSAGE as WELCOME} from "./Constants.js";
 
 const showMessagesFromToday = (allMessages) => {
