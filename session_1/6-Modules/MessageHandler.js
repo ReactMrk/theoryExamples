@@ -1,7 +1,9 @@
 // Named import and importing using an alias:
-import { getMessageInfo, filterTodaysMessages as filterToday} from './MessageUtils.js'
+import { getMessageInfo, filterTodaysMessages as filterToday } from './MessageUtils.js'
 // Importing everything with *:
 import * as CONSTANTS from "./Constants.js";
+// Importing a default export, which doesn't need '{ }' and we can use any name:
+import messages from "./MessageList.js";
 
 const showMessagesFromToday = (allMessages) => {
   const todaysMessages = filterToday(allMessages);
@@ -13,10 +15,4 @@ const showMessagesFromToday = (allMessages) => {
     console.log(CONSTANTS.NO_MESSAGES);
 }
 
-const messageList = [
-  { from: 'Jordi', sentDate: new Date('2025-01-09'), subject: 'Great news!' },
-  { from: 'Ana', sentDate: new Date('2025-01-11'), subject: 'An important update' },
-  { from: 'Albert', sentDate: new Date('2025-01-11'), subject: 'New dog!' },
-]
-
-showMessagesFromToday(messageList);
+showMessagesFromToday(messages());

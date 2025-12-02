@@ -1,4 +1,4 @@
-// Exporting individually
+// Exporting individually (named exports):
 export const getMessageInfo = (message) => {
   return message.from + '\t ' + message.sentDate.toLocaleDateString() + ': ' + message.subject;
 }
